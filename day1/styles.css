@@ -1,0 +1,110 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+div.content{
+  width: 50%;
+  height: 40%;
+}
+
+div.background{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  background-color: #34495E;
+}
+
+div.base{
+  width: 200px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #BDC3C7 ;
+}
+
+div.container-pendulos{
+  display: flex;
+  justify-content: space-around;
+}
+div.container-linha-pendulo{
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+div.movimento{
+  animation: movimentos alternate infinite   0.8s ;
+  animation-timing-function: ease-out;
+ 
+  animation-fill-mode: none;
+  animation-play-state: running;
+  
+  
+}
+
+div.movimento2{
+  animation: movimentos2 alternate 0.8s ;
+  animation-delay: 0.8s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+
+
+
+
+}
+
+@keyframes movimentos2 {
+  0%, 
+  50%{
+    transform: rotate(0);
+    transform-origin: top;
+  
+  }
+
+  100%{
+    transform-origin: top;
+    transform: rotate(-30deg);
+  }
+}
+
+@keyframes movimentos {
+  0%, 50%{
+    
+    transform: rotate(0);
+    transform-origin: top;
+  }
+
+  100%{
+   
+    transform-origin: top;
+    transform: rotate(30deg);
+  }
+
+}
+
+
+
+div.container-bola{
+  display: flex;
+  flex-direction: column;
+}
+div.linha-pendulo{
+  
+  /* margin-left: 5px; */
+  width: 1px;
+  height: 110px;
+  background-color: #BDC3C7 ;
+}
+
+div.bola{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+}
